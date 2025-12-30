@@ -8,7 +8,7 @@ export default defineConfig({
   name: 'default',
   title: 'TheWriteBlog',
 
-  projectId: 'dtbj3t1s',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
   dataset: 'production',
 
   plugins: [structureTool(), visionTool(), codeInput()],
