@@ -28,47 +28,46 @@ export default async function Image({ params }: Props) {
   const title = post?.title || "Blog Post";
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        background: "white",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "80px",
+        color: "black",
+      }}
+    >
       <div
         style={{
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-          width: "100%",
-          height: "100%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: "80px",
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(10px)",
+          borderRadius: "24px",
+          padding: "60px",
+          border: "2px solid rgba(255, 255, 255, 0.2)",
         }}
       >
-        <div
+        <h1
           style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "rgba(255, 255, 255, 0.1)",
-            backdropFilter: "blur(10px)",
-            borderRadius: "24px",
-            padding: "60px",
-            border: "2px solid rgba(255, 255, 255, 0.2)",
+            fontSize: 72,
+            fontWeight: "bold",
+            color: "black",
+            textAlign: "center",
+            lineHeight: 1.2,
+            margin: 0,
+            // textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
           }}
         >
-          <h1
-            style={{
-              fontSize: 72,
-              fontWeight: "bold",
-              color: "white",
-              textAlign: "center",
-              lineHeight: 1.2,
-              margin: 0,
-              textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-            }}
-          >
-            {title}
-          </h1>
-        </div>
+          {title}
+        </h1>
       </div>
-    )
+    </div>
   );
 }
