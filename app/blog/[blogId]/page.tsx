@@ -23,13 +23,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: post?.title || "Year Review",
         description: post?.description || "A year in review",
-        images: [
-          {
-            url: post?.mainImage?.asset?.url || "/default-image.jpg",
-            width: 800,
-            height: 600,
-          },
-        ],
       },
     };
   } catch (error) {
